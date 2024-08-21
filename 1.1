@@ -1,0 +1,53 @@
+local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
+
+ local GUI = Mercury:Create{
+ Name = "FTF SV1.1",
+ Size = UDim2.fromOffset(600, 400), Theme = Mercury.Themes.Dark, Link = "GUI Scam Visual"
+ }
+ GUI:Notification{ 	Title = "Atualização:", 	Text = "Scam fix by nr4z", 	Duration = 5, 	Callback = function() end }
+end 
+	 end
+} 
+local Tab5 = GUI:Tab{
+ 	Name = "Scam.", 	Icon = "rbxassetid://8569322835"
+} Tab5:Button{ 
+	Name = "Fechar GUI",
+ 	Description = nil,
+ 	Callback = function() if game.PlaceId == 1738581510 then 	 game:GetService("Players").LocalPlayer.PlayerGui.MenusScreenGui.TradingMenuWindow.Visible = false
+GUI:Notification{ 	Title = "Aviso!",
+ 	Text = "O scam visual foi cancelado.",
+ 	Duration = 5,
+ 	Callback = function() end
+}
+else GUI:Notification{ 	Title = "Aviso!",
+ 	Text = "Entre no posto de troca.",
+ 	Duration = 3,
+ 	Callback = function() end
+}
+end
+ 	 end
+}
+Tab5:Button{
+ 	Name = "Scam Visual",
+ 	Description = nil,
+ 	Callback = function()
+if game.PlaceId == 1738581510 then firesignal(game:GetService("Players").LocalPlayer.PlayerGui.MenusScreenGui.TradingMenuWindow.TopBar.CloseButton.MouseButton1Down)
+wait(3) game:GetService("Players").LocalPlayer.PlayerGui.MenusScreenGui.TradingMenuWindow.Visible = true
+else 
+GUI:Notification{
+ 	Title = "Aviso!",
+ 	Text = "Entre no posto de troca.",
+ 	Duration = 3,
+ 	Callback = function()
+end
+} 
+end
+ 	 end
+} 
+Tab5:Textbox{
+ 	Name = "Enviar troca",
+ 	Callback = function(text) local args = { [1] = "SendTradeRequest",
+ [2] = game.Players[text].UserId
+} game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+ end
+}
